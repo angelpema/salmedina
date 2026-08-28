@@ -1,0 +1,1544 @@
+/* =========================================================
+   PALETA SALMEDINA
+   El color principal se ha extraído aproximadamente del logo.
+
+   Principal: #31328B
+========================================================= */
+
+:root {
+
+    --salmedina-blue: #31328b;
+    --salmedina-blue-dark: #20215e;
+    --salmedina-blue-deep: #161747;
+    --salmedina-blue-light: #5c5fb0;
+    --salmedina-blue-soft: #eeeeF8;
+
+    --white: #ffffff;
+    --off-white: #fafafa;
+
+    --text: #27283d;
+    --muted: #686a78;
+    --border: #e2e2eb;
+
+    --shadow:
+        0 10px 30px rgba(32, 33, 94, 0.10);
+
+    --max-width: 1180px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   CABECERA
+   MOBILE FIRST
+========================================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: var(--white);
+
+    border-bottom:
+        1px solid rgba(49, 50, 139, 0.15);
+
+    box-shadow:
+        0 2px 14px rgba(32, 33, 94, 0.08);
+}
+
+
+.header__container {
+
+    width: min(100% - 28px, var(--max-width));
+    min-height: 76px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 45px 1fr 45px;
+    align-items: center;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 0;
+}
+
+
+.logo__image {
+
+    width: auto;
+    max-width: 175px;
+    max-height: 58px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   MENÚ MÓVIL
+========================================================= */
+
+.menu-button {
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+
+.menu-button span {
+
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    background: var(--salmedina-blue);
+}
+
+
+.nav {
+    display: none;
+}
+
+
+.header__phone {
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--salmedina-blue);
+
+    font-size: 1.25rem;
+}
+
+
+.header__phone-text {
+    display: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: calc(100svh - 76px);
+
+    padding: 70px 23px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: var(--white);
+
+    background:
+        url("../static/img/hero-restaurante.jpg")
+        center / cover no-repeat;
+}
+
+
+.hero__overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(22, 23, 71, 0.25) 0%,
+            rgba(32, 33, 94, 0.58) 55%,
+            rgba(22, 23, 71, 0.86) 100%
+        );
+}
+
+
+.hero__content {
+
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 560px;
+}
+
+
+.hero__eyebrow {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.65rem;
+}
+
+
+.hero__title {
+
+    margin-top: 3px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(3.6rem, 18vw, 5.2rem);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+}
+
+
+.hero__description {
+
+    max-width: 420px;
+
+    margin:
+        23px auto 31px;
+
+    font-size: 1rem;
+}
+
+
+.hero__actions {
+
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+
+/* =========================================================
+   DECORACIÓN
+========================================================= */
+
+.decorative-line {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+
+.decorative-line > span:not(.decorative-line__icon) {
+
+    width: 68px;
+    height: 1px;
+
+    background: currentColor;
+
+    opacity: 0.7;
+}
+
+
+.decorative-line__icon {
+
+    font-size: 0.6rem;
+}
+
+
+.decorative-line--small {
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.button {
+
+    min-height: 52px;
+
+    padding:
+        13px 23px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid transparent;
+
+    border-radius: 3px;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.button:active {
+    transform: scale(0.98);
+}
+
+
+.button--primary {
+
+    background:
+        var(--salmedina-blue);
+
+    color:
+        var(--white);
+}
+
+
+.button--outline-light {
+
+    border-color:
+        rgba(255, 255, 255, 0.9);
+
+    color:
+        var(--white);
+
+    background:
+        rgba(255, 255, 255, 0.05);
+}
+
+
+.button--outline-dark {
+
+    border-color:
+        var(--salmedina-blue);
+
+    color:
+        var(--salmedina-blue);
+
+    background:
+        transparent;
+}
+
+
+.button--light {
+
+    background:
+        var(--white);
+
+    color:
+        var(--salmedina-blue);
+}
+
+
+/* =========================================================
+   CONTENEDOR GENERAL
+========================================================= */
+
+.section-container {
+
+    width:
+        min(100% - 38px, var(--max-width));
+
+    margin:
+        0 auto;
+}
+
+
+/* =========================================================
+   CARTA
+========================================================= */
+
+.menu-section {
+
+    padding:
+        70px 0;
+
+    background:
+        var(--off-white);
+}
+
+
+.section-heading {
+
+    margin-bottom:
+        34px;
+}
+
+
+.section-heading__label {
+
+    color:
+        var(--salmedina-blue);
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.12em;
+
+    font-size:
+        0.75rem;
+
+    font-weight:
+        700;
+}
+
+
+.section-heading h2 {
+
+    margin-top:
+        11px;
+
+    color:
+        var(--salmedina-blue-dark);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        2.25rem;
+
+    line-height:
+        1.15;
+
+    font-weight:
+        500;
+}
+
+
+.section-heading p {
+
+    margin-top:
+        13px;
+
+    color:
+        var(--muted);
+}
+
+
+/* =========================================================
+   TARJETAS DE PLATO
+========================================================= */
+
+.dishes {
+
+    display:
+        grid;
+
+    gap:
+        24px;
+}
+
+
+.dish-card {
+
+    overflow:
+        hidden;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        4px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.dish-card__image {
+
+    aspect-ratio:
+        4 / 3;
+
+    object-fit:
+        cover;
+}
+
+
+.dish-card__content {
+
+    padding:
+        22px;
+}
+
+
+.dish-card h3 {
+
+    color:
+        var(--salmedina-blue-dark);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        1.35rem;
+
+    font-weight:
+        500;
+}
+
+
+.dish-card p {
+
+    margin-top:
+        8px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        0.92rem;
+}
+
+
+.dish-card__price {
+
+    display:
+        block;
+
+    margin-top:
+        16px;
+
+    color:
+        var(--salmedina-blue);
+
+    font-weight:
+        700;
+}
+
+
+.section-action {
+
+    margin-top:
+        34px;
+}
+
+
+.section-action .button {
+    width: 100%;
+}
+
+
+/* =========================================================
+   RESERVAS
+========================================================= */
+
+.reservation-section {
+
+    padding:
+        62px 22px;
+
+    color:
+        var(--white);
+
+    background:
+
+        linear-gradient(
+            rgba(32, 33, 94, 0.94),
+            rgba(22, 23, 71, 0.97)
+        ),
+
+        url("../static/img/fondo-reserva.jpg")
+        center / cover no-repeat;
+}
+
+
+.reservation-section__content {
+
+    max-width:
+        760px;
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        50px 1fr;
+
+    gap:
+        18px;
+}
+
+
+.reservation-section__icon {
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.65);
+
+    border-radius:
+        50%;
+}
+
+
+.reservation-section__label {
+
+    text-transform:
+        uppercase;
+
+    font-size:
+        0.78rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.1em;
+}
+
+
+.reservation-section h2 {
+
+    margin-top:
+        8px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        2rem;
+
+    font-weight:
+        500;
+}
+
+
+.reservation-section p {
+
+    margin:
+        11px 0 15px;
+
+    color:
+        rgba(255, 255, 255, 0.84);
+}
+
+
+.reservation-section__phone {
+
+    display:
+        block;
+
+    margin-bottom:
+        20px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        2rem;
+}
+
+
+.reservation-section .button {
+    width: 100%;
+}
+
+
+/* =========================================================
+   INFORMACIÓN
+========================================================= */
+
+.information-section {
+
+    padding:
+        67px 0;
+
+    background:
+        var(--white);
+}
+
+
+.information-grid {
+
+    display:
+        grid;
+
+    gap:
+        55px;
+}
+
+
+.information-card__title {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    margin-bottom:
+        25px;
+}
+
+
+.information-card__title h2 {
+
+    color:
+        var(--salmedina-blue-dark);
+
+    font-size:
+        0.85rem;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.09em;
+}
+
+
+.information-card__icon {
+
+    width:
+        43px;
+
+    height:
+        43px;
+
+    display:
+        inline-flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    border:
+        1px solid var(--salmedina-blue);
+
+    border-radius:
+        50%;
+
+    color:
+        var(--salmedina-blue);
+
+    font-size:
+        1.1rem;
+}
+
+
+.schedule__row {
+
+    padding:
+        15px 0;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        25px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    font-size:
+        0.92rem;
+}
+
+
+.schedule__row span:last-child {
+    text-align: right;
+}
+
+
+.address {
+
+    margin-bottom:
+        14px;
+
+    font-size:
+        1.05rem;
+}
+
+
+.text-link {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        22px;
+
+    color:
+        var(--salmedina-blue);
+
+    text-transform:
+        uppercase;
+
+    font-size:
+        0.8rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.04em;
+}
+
+
+.map-image {
+
+    min-height:
+        210px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        3px;
+}
+
+
+/* =========================================================
+   IMAGEN FINAL
+========================================================= */
+
+.closing-image {
+
+    position:
+        relative;
+
+    min-height:
+        270px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    color:
+        var(--white);
+
+    background:
+
+        url("../static/img/restaurante-interior.jpg")
+        center / cover no-repeat;
+}
+
+
+.closing-image__overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        rgba(32, 33, 94, 0.58);
+}
+
+
+.closing-image__content {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    text-align:
+        center;
+}
+
+
+.closing-image h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        2.4rem;
+
+    font-weight:
+        500;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    background:
+        var(--salmedina-blue-deep);
+
+    color:
+        var(--white);
+}
+
+
+.footer__container {
+
+    width:
+        min(100% - 38px, var(--max-width));
+
+    margin:
+        0 auto;
+
+    padding:
+        55px 0;
+
+    display:
+        grid;
+
+    gap:
+        38px;
+}
+
+
+.footer__brand {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+}
+
+
+.footer__logo {
+
+    width:
+        auto;
+
+    max-width:
+        190px;
+
+    max-height:
+        65px;
+
+    object-fit:
+        contain;
+
+    /*
+       El logo actual tiene fondo blanco.
+       Cuando tengas el PNG transparente,
+       se verá todavía mejor aquí.
+    */
+    background:
+        var(--white);
+
+    padding:
+        5px 10px;
+
+    border-radius:
+        3px;
+}
+
+
+.footer__brand p {
+
+    max-width:
+        300px;
+
+    margin-top:
+        18px;
+
+    color:
+        rgba(255, 255, 255, 0.73);
+}
+
+
+.footer h3 {
+
+    margin-bottom:
+        14px;
+
+    font-size:
+        0.76rem;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.09em;
+}
+
+
+.footer__links,
+.footer__contact {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        9px;
+}
+
+
+.footer__links a,
+.footer__contact a,
+.footer__contact span {
+
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-size:
+        0.9rem;
+}
+
+
+.footer__bottom {
+
+    padding:
+        20px;
+
+    text-align:
+        center;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.14);
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size:
+        0.78rem;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 720px) {
+
+    .hero {
+        min-height:
+            650px;
+    }
+
+
+    .hero__actions {
+
+        flex-direction:
+            row;
+
+        justify-content:
+            center;
+    }
+
+
+    .hero__actions .button {
+
+        min-width:
+            210px;
+    }
+
+
+    .dishes {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .section-action {
+
+        text-align:
+            center;
+    }
+
+
+    .section-action .button {
+
+        width:
+            auto;
+
+        min-width:
+            270px;
+    }
+
+
+    .information-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            70px;
+    }
+
+
+    .footer__container {
+
+        grid-template-columns:
+            2fr 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   ESCRITORIO
+========================================================= */
+
+@media (min-width: 1000px) {
+
+    .header__container {
+
+        min-height:
+            88px;
+
+        grid-template-columns:
+            245px 1fr 220px;
+    }
+
+
+    .logo {
+
+        justify-content:
+            flex-start;
+    }
+
+
+    .logo__image {
+
+        max-width:
+            205px;
+
+        max-height:
+            69px;
+    }
+
+
+    .menu-button {
+        display: none;
+    }
+
+
+    .nav {
+
+        display:
+            flex;
+
+        justify-content:
+            center;
+
+        align-items:
+            center;
+
+        gap:
+            38px;
+    }
+
+
+    .nav__link {
+
+        position:
+            relative;
+
+        color:
+            var(--salmedina-blue-dark);
+
+        font-size:
+            0.81rem;
+
+        font-weight:
+            600;
+
+        text-transform:
+            uppercase;
+
+        letter-spacing:
+            0.04em;
+    }
+
+
+    .nav__link::after {
+
+        content:
+            "";
+
+        position:
+            absolute;
+
+        left:
+            0;
+
+        bottom:
+            -10px;
+
+        width:
+            0;
+
+        height:
+            2px;
+
+        background:
+            var(--salmedina-blue);
+
+        transition:
+            width 0.2s ease;
+    }
+
+
+    .nav__link:hover::after {
+        width: 100%;
+    }
+
+
+    .header__phone {
+
+        width:
+            auto;
+
+        height:
+            45px;
+
+        padding:
+            0 17px;
+
+        gap:
+            8px;
+
+        border:
+            1px solid var(--salmedina-blue);
+
+        border-radius:
+            3px;
+
+        color:
+            var(--salmedina-blue);
+
+        font-size:
+            0.79rem;
+
+        font-weight:
+            700;
+
+        text-transform:
+            uppercase;
+    }
+
+
+    .header__phone-text {
+        display: inline;
+    }
+
+
+    .hero {
+
+        min-height:
+            620px;
+
+        justify-content:
+            flex-start;
+
+        padding-left:
+            max(
+                60px,
+                calc((100vw - var(--max-width)) / 2)
+            );
+
+        text-align:
+            left;
+    }
+
+
+    .hero__content {
+        max-width: 610px;
+    }
+
+
+    .hero__eyebrow {
+        font-size: 2.2rem;
+    }
+
+
+    .hero__title {
+        font-size: 5.3rem;
+    }
+
+
+    .decorative-line {
+        justify-content: flex-start;
+    }
+
+
+    .hero__description {
+
+        margin-left:
+            0;
+
+        font-size:
+            1.08rem;
+    }
+
+
+    .hero__actions {
+        justify-content: flex-start;
+    }
+
+
+    .menu-section {
+        padding:
+            92px 0;
+    }
+
+
+    .section-heading {
+
+        max-width:
+            680px;
+
+        margin:
+            0 auto 45px;
+
+        text-align:
+            center;
+    }
+
+
+    .section-heading h2 {
+        font-size: 2.7rem;
+    }
+
+
+    .dish-card {
+
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+
+    .dish-card:hover {
+
+        transform:
+            translateY(-5px);
+
+        box-shadow:
+            0 16px 38px rgba(32, 33, 94, 0.15);
+    }
+
+
+    .button--primary:hover {
+
+        background:
+            var(--salmedina-blue-dark);
+    }
+
+
+    .button--outline-dark:hover {
+
+        background:
+            var(--salmedina-blue);
+
+        color:
+            var(--white);
+    }
+
+
+    .reservation-section {
+        padding:
+            72px 0;
+    }
+
+
+    .reservation-section__content {
+
+        grid-template-columns:
+            70px 1fr;
+
+        align-items:
+            flex-start;
+    }
+
+
+    .reservation-section__icon {
+
+        width:
+            62px;
+
+        height:
+            62px;
+    }
+
+
+    .reservation-section .button {
+
+        width:
+            auto;
+
+        min-width:
+            210px;
+    }
+
+
+    .information-section {
+        padding:
+            88px 0;
+    }
+
+
+    .closing-image {
+        min-height:
+            325px;
+    }
+
+
+    .closing-image h2 {
+        font-size: 3rem;
+    }
+}
+
+
+/* =========================================================
+   PANTALLAS GRANDES
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .hero {
+        min-height:
+            700px;
+    }
+
+
+    .hero__title {
+        font-size:
+            5.8rem;
+    }
+}
+
+.map-frame {
+    width: 100%;
+    height: 260px;
+
+    border: 0;
+    border-radius: 4px;
+
+    display: block;
+}
+
+@media (min-width: 1000px) {
+
+    .map-frame {
+        height: 320px;
+    }
+
+}
