@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Salón de Restaurante Salmedina. Consulta nuestra carta, platos especiales y reserva tu mesa.">
+    <title>Salón | Salmedina</title>
+    <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/salon.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__container">
+        <button class="menu-button" id="menuButton" type="button"
+                aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+            <span></span><span></span><span></span>
+        </button>
+
+        <a href="index.html" class="logo" aria-label="Salmedina">
+            <img src="static/img/logo.png"
+                 alt="Restaurante Salmedina"
+                 class="logo__image">
+        </a>
+
+        <nav class="nav">
+            <a href="index.html" class="nav__link">Inicio</a>
+            <a href="static/doc/carta.pdf" target="_blank" class="nav__link">Carta</a>
+            <a href="terraza.html" class="nav__link">Terraza</a>
+            <a href="salon.html" class="nav__link nav__link--active">Salón</a>
+            <a href="index.html#reservas" class="nav__link">Reservas</a>
+            <a href="index.html#informacion" class="nav__link">Ubicación</a>
+        </nav>
+
+        <a href="tel:+34954727988" class="header__phone" aria-label="Llamar a Salmedina">
+            <span class="header__phone-icon">☎</span>
+            <span class="header__phone-text">Llamar</span>
+        </a>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="mobile-nav__link">Inicio</a>
+        <a href="static/doc/carta.pdf" target="_blank" class="mobile-nav__link">Carta</a>
+        <a href="terraza.html" class="mobile-nav__link">Terraza</a>
+        <a href="salon.html" class="mobile-nav__link mobile-nav__link--active">Salón</a>
+        <a href="index.html#reservas" class="mobile-nav__link">Reservas</a>
+        <a href="index.html#informacion" class="mobile-nav__link">Ubicación</a>
+        <a href="tel:+34954727988" class="mobile-nav__reserve">☎ Reservar por teléfono</a>
+    </nav>
+</header>
+
+<main>
+    <section class="salon-hero">
+        <div class="salon-hero__overlay"></div>
+        <div class="salon-hero__content">
+            <span class="salon-hero__label">Restaurante Salmedina</span>
+            <h1>Nuestro salón</h1>
+            <p>Un espacio acogedor para disfrutar de nuestra cocina, compartir alrededor de la mesa y celebrar buenos momentos.</p>
+            <div class="salon-hero__actions">
+                <a href="static/doc/CartaRestaurante.pdf" target="_blank" class="button button--salon-primary">Ver carta</a>
+                <a href="tel:+34954727988" class="button button--salon-outline">☎ Reservar mesa</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="salon-intro">
+        <div class="salon-container salon-intro__grid">
+            <div class="salon-intro__content">
+                <span class="salon-section-label">Salmedina</span>
+                <h2>Siéntete como en casa</h2>
+                <p>Nuestro salón está pensado para disfrutar de una comida tranquila, una cena especial o cualquier encuentro alrededor de una buena mesa.</p>
+                <p>Un ambiente cuidado, cercano y cómodo donde la cocina de Salmedina es siempre la protagonista.</p>
+            </div>
+            <div class="salon-intro__image">
+                <img src="static/img/salonReserva.jpeg"
+                     alt="Interior del salón de Restaurante Salmedina">
+            </div>
+        </div>
+    </section>
+
+    <section class="salon-menu">
+        <div class="salon-container salon-menu__content">
+            <span class="salon-section-label salon-section-label--light">Nuestra carta</span>
+            <h2>Descubre la cocina de Salmedina</h2>
+            <p>Consulta nuestra carta completa y descubre todos nuestros platos, entrantes, principales y postres.</p>
+            <a href="static/doc/CartaRestaurante.pdf" target="_blank" class="button button--white">Ver carta completa</a>
+        </div>
+    </section>
+
+    <section class="special-dishes">
+        <div class="salon-container">
+            <div class="salon-heading">
+                <span class="salon-section-label">Recomendaciones</span>
+                <h2>Platos especiales</h2>
+                <p>Algunas propuestas que representan la cocina de Salmedina.</p>
+            </div>
+
+            <div class="special-dishes__grid">
+                <article class="special-dish">
+                    <div class="special-dish__image-wrapper">
+                        <img src="static/img/salonConPlatos.jpeg" alt="Plato especial de Salmedina" class="special-dish__image">
+                        <span class="special-dish__badge">Especial</span>
+                    </div>
+                    <div class="special-dish__content">
+                        <h3>Especialidad Salmedina</h3>
+                        <p>Añade aquí la descripción del plato, sus ingredientes principales o aquello que lo hace especial.</p>
+                    </div>
+                </article>
+
+                <article class="special-dish">
+                    <div class="special-dish__image-wrapper">
+                        <img src="static/img/platoQueso.jpeg" alt="Plato recomendado de Salmedina" class="special-dish__image">
+                        <span class="special-dish__badge">Recomendado</span>
+                    </div>
+                    <div class="special-dish__content">
+                        <h3>Plato recomendado</h3>
+                        <p>Añade aquí una breve descripción de uno de los platos más representativos del restaurante.</p>
+                    </div>
+                </article>
+
+                <article class="special-dish">
+                    <div class="special-dish__image-wrapper">
+                        <img src="static/img/postreCoulan.jpeg" alt="Postre especial de Salmedina" class="special-dish__image">
+                        <span class="special-dish__badge">Para terminar</span>
+                    </div>
+                    <div class="special-dish__content">
+                        <h3>Un final especial</h3>
+                        <p>Puedes utilizar este espacio para destacar un postre casero o cualquier otra propuesta.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="salon-gallery">
+        <div class="salon-container">
+            <div class="salon-heading salon-heading--left">
+                <span class="salon-section-label">El espacio</span>
+                <h2>Conoce nuestro salón</h2>
+            </div>
+
+            <div class="salon-gallery__grid">
+                <figure class="salon-gallery__item salon-gallery__item--large">
+                    <img src="static/img/salonConPlatos.jpeg" alt="Salón de Restaurante Salmedina">
+                </figure>
+                <figure class="salon-gallery__item salon-gallery__item--large">
+                    <img src="static/img/salonReserva.jpeg" alt="Mesas del salón de Restaurante Salmedina">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="salon-reservation">
+        <div class="salon-reservation__overlay"></div>
+        <div class="salon-reservation__content">
+            <span class="salon-section-label salon-section-label--light">Reserva</span>
+            <h2>Reserva tu mesa en nuestro salón</h2>
+            <p>Llámanos y reserva tu mesa para disfrutar de Salmedina.</p>
+            <a href="tel:+34954727988" class="salon-reservation__phone">955 123 456</a>
+            <a href="tel:+34954727988" class="button button--white">☎ Llamar para reservar</a>
+        </div>
+    </section>
+</main>
+
+<footer class="salon-footer">
+    <div class="salon-container salon-footer__grid">
+        <div>
+            <img src="static/img/logo.png" alt="Salmedina" class="salon-footer__logo">
+        </div>
+        <div class="salon-footer__navigation">
+            <a href="index.html">Inicio</a>
+            <a href="static/doc/carta.pdf" target="_blank">Carta</a>
+            <a href="terraza.html">Terraza</a>
+            <a href="salon.html">Salón</a>
+        </div>
+        <div class="salon-footer__contact">
+            <span>Reservas</span>
+            <a href="tel:+34954727988">955 123 456</a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/menu.js"></script>
+</body>
+</html>

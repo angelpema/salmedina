@@ -1,0 +1,517 @@
+/* SALÓN - RESTAURANTE SALMEDINA */
+
+:root {
+    --salon-blue: #31328b;
+    --salon-blue-dark: #20215e;
+    --salon-blue-deep: #161747;
+    --salon-soft: #f3f3fa;
+    --salon-white: #ffffff;
+    --salon-text: #28293d;
+    --salon-muted: #6a6b79;
+    --salon-border: #e2e2eb;
+}
+
+.salon-container {
+    width: min(100% - 38px, 1180px);
+    margin: 0 auto;
+}
+
+.nav__link--active,
+.mobile-nav__link--active {
+    color: var(--salon-blue);
+    font-weight: 800;
+}
+
+/* HERO */
+
+.salon-hero {
+    position: relative;
+    min-height: 590px;
+    padding: 70px 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    color: var(--salon-white);
+    text-align: center;
+
+    background:
+        url("../static/img/salon/salon-portada.jpg")
+        center / cover no-repeat;
+}
+
+.salon-hero__overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(22, 23, 71, 0.14) 0%,
+            rgba(22, 23, 71, 0.45) 45%,
+            rgba(22, 23, 71, 0.92) 100%
+        );
+}
+
+.salon-hero__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 620px;
+}
+
+.salon-hero__label {
+    display: inline-block;
+    margin-bottom: 8px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.salon-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 14vw, 5rem);
+    line-height: 1.05;
+    font-weight: 500;
+}
+
+.salon-hero p {
+    max-width: 510px;
+    margin: 20px auto 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.salon-hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.button--salon-primary {
+    background: var(--salon-blue);
+    color: var(--salon-white);
+}
+
+.button--salon-outline {
+    border-color: rgba(255, 255, 255, 0.9);
+    color: var(--salon-white);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.button--white {
+    background: var(--salon-white);
+    color: var(--salon-blue);
+}
+
+/* CABECERAS */
+
+.salon-section-label {
+    color: var(--salon-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+}
+
+.salon-section-label--light {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.salon-heading {
+    margin-bottom: 32px;
+}
+
+.salon-heading h2,
+.salon-intro h2 {
+    margin-top: 10px;
+    color: var(--salon-blue-dark);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.2rem;
+    line-height: 1.15;
+    font-weight: 500;
+}
+
+.salon-heading p {
+    margin-top: 12px;
+    color: var(--salon-muted);
+}
+
+/* PRESENTACIÓN */
+
+.salon-intro {
+    padding: 70px 0;
+}
+
+.salon-intro__grid {
+    display: grid;
+    gap: 32px;
+}
+
+.salon-intro__content p {
+    margin-top: 17px;
+    color: var(--salon-muted);
+}
+
+.salon-intro__image {
+    overflow: hidden;
+}
+
+.salon-intro__image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+/* CARTA */
+
+.salon-menu {
+    padding: 65px 22px;
+
+    background:
+        linear-gradient(
+            rgba(32, 33, 94, 0.95),
+            rgba(22, 23, 71, 0.97)
+        ),
+        url("../static/img/salon/fondo-carta-salon.jpg")
+        center / cover no-repeat;
+
+    color: var(--salon-white);
+}
+
+.salon-menu__content {
+    text-align: center;
+}
+
+.salon-menu h2 {
+    margin-top: 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+    line-height: 1.15;
+    font-weight: 500;
+}
+
+.salon-menu p {
+    max-width: 570px;
+    margin: 16px auto 28px;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.salon-menu .button {
+    width: 100%;
+}
+
+/* PLATOS ESPECIALES */
+
+.special-dishes {
+    padding: 72px 0;
+    background: var(--salon-soft);
+}
+
+.special-dishes__grid {
+    display: grid;
+    gap: 25px;
+}
+
+.special-dish {
+    overflow: hidden;
+    background: var(--salon-white);
+    border: 1px solid var(--salon-border);
+}
+
+.special-dish__image-wrapper {
+    position: relative;
+}
+
+.special-dish__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.special-dish__badge {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+
+    padding: 7px 11px;
+    background: var(--salon-blue);
+    color: var(--salon-white);
+
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.special-dish__content {
+    padding: 22px;
+}
+
+.special-dish h3 {
+    color: var(--salon-blue-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+.special-dish p {
+    margin-top: 9px;
+    color: var(--salon-muted);
+    font-size: 0.92rem;
+}
+
+/* GALERÍA */
+
+.salon-gallery {
+    padding: 72px 0;
+    background: var(--salon-white);
+}
+
+.salon-gallery__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+}
+
+.salon-gallery__item {
+    overflow: hidden;
+    min-height: 190px;
+}
+
+.salon-gallery__item--large,
+.salon-gallery__item--wide {
+    grid-column: 1 / -1;
+}
+
+.salon-gallery__item img {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    object-fit: cover;
+}
+
+/* RESERVAS */
+
+.salon-reservation {
+    position: relative;
+    min-height: 440px;
+    padding: 65px 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: var(--salon-white);
+
+    background:
+        url("../static/img/salon/reserva-salon.jpg")
+        center / cover no-repeat;
+}
+
+.salon-reservation__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(22, 23, 71, 0.86);
+}
+
+.salon-reservation__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 620px;
+}
+
+.salon-reservation h2 {
+    margin-top: 9px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.35rem;
+    line-height: 1.15;
+    font-weight: 500;
+}
+
+.salon-reservation p {
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.84);
+}
+
+.salon-reservation__phone {
+    display: block;
+    margin: 18px 0 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+}
+
+.salon-reservation .button {
+    width: 100%;
+}
+
+/* FOOTER */
+
+.salon-footer {
+    padding: 45px 0;
+    background: var(--salon-blue-deep);
+    color: var(--salon-white);
+}
+
+.salon-footer__grid {
+    display: grid;
+    gap: 32px;
+}
+
+.salon-footer__logo {
+    width: auto;
+    max-width: 180px;
+    max-height: 65px;
+    object-fit: contain;
+
+    background: var(--salon-white);
+    padding: 5px 10px;
+}
+
+.salon-footer__navigation,
+.salon-footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.salon-footer__navigation a,
+.salon-footer__contact a,
+.salon-footer__contact span {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+}
+
+/* TABLET */
+
+@media (min-width: 700px) {
+    .salon-hero__actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .salon-hero__actions .button {
+        min-width: 210px;
+    }
+
+    .salon-menu .button,
+    .salon-reservation .button {
+        width: auto;
+        min-width: 230px;
+    }
+
+    .special-dishes__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .salon-gallery__grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 240px 220px;
+    }
+
+    .salon-gallery__item {
+        min-height: 0;
+    }
+
+    .salon-gallery__item--large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .salon-gallery__item--wide {
+        grid-column: span 2;
+    }
+
+    .salon-footer__grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+/* ESCRITORIO */
+
+@media (min-width: 1000px) {
+    .salon-hero {
+        min-height: 650px;
+        align-items: center;
+        text-align: left;
+        justify-content: flex-start;
+
+        padding-left:
+            max(
+                60px,
+                calc((100vw - 1180px) / 2)
+            );
+    }
+
+    .salon-hero__content {
+        max-width: 630px;
+    }
+
+    .salon-hero p {
+        margin-left: 0;
+    }
+
+    .salon-hero__actions {
+        justify-content: flex-start;
+    }
+
+    .salon-intro {
+        padding: 90px 0;
+    }
+
+    .salon-intro__grid {
+        grid-template-columns: 0.9fr 1.1fr;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .salon-intro__image img {
+        height: 500px;
+    }
+
+    .salon-intro h2,
+    .salon-heading h2 {
+        font-size: 2.7rem;
+    }
+
+    .salon-menu {
+        padding: 85px 0;
+    }
+
+    .salon-menu h2 {
+        font-size: 2.8rem;
+    }
+
+    .special-dishes {
+        padding: 90px 0;
+    }
+
+    .special-dish {
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .special-dish:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 36px rgba(32, 33, 94, 0.12);
+    }
+
+    .salon-gallery {
+        padding: 90px 0;
+    }
+
+    .salon-reservation {
+        min-height: 500px;
+    }
+
+    .salon-reservation h2 {
+        font-size: 3rem;
+    }
+}

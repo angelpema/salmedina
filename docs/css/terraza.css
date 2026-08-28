@@ -1,0 +1,566 @@
+/* =========================================================
+   TERRAZA - RESTAURANTE SALMEDINA
+   Complementa welcome.css
+========================================================= */
+
+:root {
+    --terrace-blue: #31328b;
+    --terrace-blue-dark: #20215e;
+    --terrace-blue-deep: #161747;
+    --terrace-soft: #f3f3fa;
+    --terrace-white: #ffffff;
+    --terrace-muted: #6a6b79;
+    --terrace-border: #e2e2eb;
+}
+
+
+.terrace-container {
+    width: min(100% - 38px, 1180px);
+    margin: 0 auto;
+}
+
+
+.nav__link--active,
+.mobile-nav__link--active {
+    color: var(--terrace-blue);
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.terrace-hero {
+    position: relative;
+
+    min-height: 590px;
+
+    padding: 70px 22px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    color: var(--terrace-white);
+    text-align: center;
+
+    background:
+        url("../static/img/terraza/terraza-portada.jpg")
+        center / cover no-repeat;
+}
+
+
+.terrace-hero__overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(22, 23, 71, 0.12) 0%,
+            rgba(32, 33, 94, 0.48) 50%,
+            rgba(22, 23, 71, 0.91) 100%
+        );
+}
+
+
+.terrace-hero__content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 620px;
+}
+
+
+.terrace-hero__label {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+
+.terrace-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(3rem, 14vw, 5rem);
+    line-height: 1.05;
+    font-weight: 500;
+}
+
+
+.terrace-hero p {
+    max-width: 520px;
+
+    margin: 20px auto 30px;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+.terrace-hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.button--terrace-primary {
+    background: var(--terrace-blue);
+    color: var(--terrace-white);
+}
+
+
+.button--terrace-outline {
+    border-color: rgba(255, 255, 255, 0.9);
+
+    color: var(--terrace-white);
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+
+.button--terrace-dark {
+    margin-top: 25px;
+
+    background: var(--terrace-blue);
+    color: var(--terrace-white);
+}
+
+
+.button--white {
+    background: var(--terrace-white);
+    color: var(--terrace-blue);
+}
+
+
+/* =========================================================
+   TEXTOS
+========================================================= */
+
+.terrace-section-label {
+    color: var(--terrace-blue);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+}
+
+
+.terrace-section-label--light {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+.terrace-heading {
+    margin-bottom: 32px;
+}
+
+
+.terrace-heading h2,
+.terrace-about h2 {
+    margin-top: 10px;
+
+    color: var(--terrace-blue-dark);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 2.2rem;
+    line-height: 1.15;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
+
+.terrace-about {
+    padding: 70px 0;
+
+    background: var(--terrace-white);
+}
+
+
+.terrace-about__grid {
+    display: grid;
+    gap: 32px;
+}
+
+
+.terrace-about__content p {
+    margin-top: 17px;
+
+    color: var(--terrace-muted);
+}
+
+
+.terrace-about__image {
+    overflow: hidden;
+}
+
+
+.terrace-about__image img {
+    width: 100%;
+    height: 390px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   CARTA
+========================================================= */
+
+.terrace-menu {
+    position: relative;
+
+    padding: 70px 22px;
+
+    color: var(--terrace-white);
+
+    background:
+        url("../static/img/terraza/fondo-carta-terraza.jpg")
+        center / cover no-repeat;
+}
+
+
+.terrace-menu__overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(32, 33, 94, 0.94),
+            rgba(22, 23, 71, 0.97)
+        );
+}
+
+
+.terrace-menu__content {
+    position: relative;
+    z-index: 1;
+
+    text-align: center;
+}
+
+
+.terrace-menu h2 {
+    margin-top: 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 2.25rem;
+    line-height: 1.15;
+    font-weight: 500;
+}
+
+
+.terrace-menu p {
+    max-width: 570px;
+
+    margin: 16px auto 28px;
+
+    color: rgba(255, 255, 255, 0.84);
+}
+
+
+.terrace-menu .button {
+    width: 100%;
+}
+
+
+/* =========================================================
+   GALERÍA
+========================================================= */
+
+.terrace-gallery {
+    padding: 72px 0;
+
+    background: var(--terrace-soft);
+}
+
+
+.terrace-gallery__grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+}
+
+
+.terrace-gallery__item {
+    min-height: 190px;
+
+    overflow: hidden;
+}
+
+
+.terrace-gallery__item--large {
+    grid-column: 1 / -1;
+
+    min-height: 290px;
+}
+
+
+.terrace-gallery__item img {
+    width: 100%;
+    height: 100%;
+
+    min-height: inherit;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   RESERVAS
+========================================================= */
+
+.terrace-reservation {
+    padding: 70px 22px;
+
+    background: var(--terrace-blue-deep);
+
+    color: var(--terrace-white);
+
+    text-align: center;
+}
+
+
+.terrace-reservation__content {
+    max-width: 620px;
+
+    margin: 0 auto;
+}
+
+
+.terrace-reservation h2 {
+    margin-top: 9px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 2.35rem;
+    line-height: 1.15;
+    font-weight: 500;
+}
+
+
+.terrace-reservation p {
+    margin-top: 15px;
+
+    color: rgba(255, 255, 255, 0.84);
+}
+
+
+.terrace-reservation__phone {
+    display: block;
+
+    margin: 18px 0 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 2rem;
+}
+
+
+.terrace-reservation .button {
+    width: 100%;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.terrace-footer {
+    padding: 45px 0;
+
+    background: #101135;
+
+    color: var(--terrace-white);
+}
+
+
+.terrace-footer__grid {
+    display: grid;
+
+    gap: 32px;
+}
+
+
+.terrace-footer__logo {
+    width: auto;
+
+    max-width: 180px;
+    max-height: 65px;
+
+    object-fit: contain;
+
+    background: var(--terrace-white);
+
+    padding: 5px 10px;
+}
+
+
+.terrace-footer__navigation,
+.terrace-footer__contact {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.terrace-footer__navigation a,
+.terrace-footer__contact a,
+.terrace-footer__contact span {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 700px) {
+
+    .terrace-hero__actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+    .terrace-hero__actions .button {
+        min-width: 220px;
+    }
+
+
+    .terrace-menu .button,
+    .terrace-reservation .button {
+        width: auto;
+
+        min-width: 240px;
+    }
+
+
+    .terrace-gallery__grid {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 340px;
+    }
+
+
+    .terrace-gallery__item,
+    .terrace-gallery__item--large {
+        grid-column: auto;
+
+        min-height: 0;
+    }
+
+
+    .terrace-footer__grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   ESCRITORIO
+========================================================= */
+
+@media (min-width: 1000px) {
+
+    .terrace-hero {
+        min-height: 650px;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        padding-left:
+            max(
+                60px,
+                calc((100vw - 1180px) / 2)
+            );
+
+        text-align: left;
+    }
+
+
+    .terrace-hero__content {
+        max-width: 650px;
+    }
+
+
+    .terrace-hero p {
+        margin-left: 0;
+    }
+
+
+    .terrace-hero__actions {
+        justify-content: flex-start;
+    }
+
+
+    .terrace-about {
+        padding: 90px 0;
+    }
+
+
+    .terrace-about__grid {
+        grid-template-columns: 0.9fr 1.1fr;
+
+        align-items: center;
+
+        gap: 70px;
+    }
+
+
+    .terrace-about__image img {
+        height: 500px;
+    }
+
+
+    .terrace-about h2,
+    .terrace-heading h2 {
+        font-size: 2.7rem;
+    }
+
+
+    .terrace-menu {
+        padding: 90px 0;
+    }
+
+
+    .terrace-menu h2 {
+        font-size: 2.8rem;
+    }
+
+
+    .terrace-gallery {
+        padding: 90px 0;
+    }
+
+
+    .terrace-reservation {
+        padding: 90px 0;
+    }
+
+
+    .terrace-reservation h2 {
+        font-size: 3rem;
+    }
+
+}
